@@ -20,5 +20,6 @@ while True:
             
 # After the loop release the cap object
 cap.release()
+cv2.waitKey(2000)
 # Destroy all the windows
 cv2.destroyAllWindows()
