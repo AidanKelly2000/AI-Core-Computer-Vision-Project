@@ -85,7 +85,7 @@ while user_wins < 3 and computer_wins < 3:
             normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
             data[0] = normalized_image
             cv2.imshow('frame', frame)
-            # print("Show 'rock', 'paper' or 'scissors'")
+            print("Show 'rock', 'paper' or 'scissors'")
 
         elif time.time() - start > 2:
 
