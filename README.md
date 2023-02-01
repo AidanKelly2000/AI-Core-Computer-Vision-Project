@@ -18,5 +18,30 @@ The files were downloaded from the Tensorflow tab of Teachable-Machine. The mode
 3 None
 ```
 
-This file labels the classes 0-3.
+This file labels the classes from 0-3 in order for the code to be easier to understand.
+
+## Milestone 3
+
+For this project there was a new conda environment created, this was done using:
+
+```
+create the conda environment with a specified python version by using:
+conda create -n computer_vision python=3.8
+
+activate the environment:
+conda activate
+
+check your list of conda environments:
+conda env list
+```
+
+the following dependencies were required for this project:
+
+```
+opencv-python, tensorflow, and ipykernel
+```
+
+They were installed using pip by running the following command conda install pip. Then, to install the rest of the libraries, run pip install opencv-python etc...
+
+
 
