@@ -1,4 +1,3 @@
-
 import random
 import time
 
@@ -35,7 +34,7 @@ def get_winner(user_choice, computer_choice):
 
     if user_choice == computer_choice:
         return print(f"Both players selected {user_choice}. It's a tie!")
-        
+
     elif user_choice == "rock":
         if computer_choice == "scissors":
             user_wins += 1
@@ -66,10 +65,12 @@ while user_wins < 3 and computer_wins < 3:
 
     while True:
 
+
+
         if time.time() - start > 7:
 
             prediction = get_prediction(resized_frame)
-            print (f"the pred probabilities are {prediction}")
+            print (f"the prediction of the user is: {prediction}")
             computer_choice = get_computer_choice()
             user_choice = prediction
             get_winner(user_choice, computer_choice)
@@ -84,8 +85,8 @@ while user_wins < 3 and computer_wins < 3:
             normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
             data[0] = normalized_image
             cv2.imshow('frame', frame)
-            print("Show 'rock', 'paper' or 'scissors'")
-            
+            # print("Show 'rock', 'paper' or 'scissors'")
+
         elif time.time() - start > 2:
 
             ret, frame = cap.read()
@@ -94,8 +95,8 @@ while user_wins < 3 and computer_wins < 3:
             normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
             data[0] = normalized_image
             cv2.imshow('frame', frame)
-            print(1)
-            
+            # print(1)
+
         elif time.time() - start > 1:
 
             ret, frame = cap.read()
@@ -104,8 +105,8 @@ while user_wins < 3 and computer_wins < 3:
             normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
             data[0] = normalized_image
             cv2.imshow('frame', frame)
-            print(2)
-            
+            # print(2)
+
         elif time.time() - start > 0:
 
             ret, frame = cap.read()
@@ -114,9 +115,10 @@ while user_wins < 3 and computer_wins < 3:
             normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
             data[0] = normalized_image
             cv2.imshow('frame', frame)
-            print(3)
-            
-            
+            # print(3)
+
+
+
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -126,11 +128,8 @@ elif user_wins == 3:
     print("You won 3 times!")
 else:
     pass
-            
+
 # After the loop release the cap object
 cap.release()
 # Destroy all the windows
 cv2.destroyAllWindows()
-
-
-
